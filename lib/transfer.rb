@@ -15,11 +15,14 @@ class Transfer
   end
   
   def execute_transaction
-    
+    #sender withdraws money and sends it to receiver; receiver adds money to their balance
+    #must be valid(refer to bank_account valid? method)
+    if sender.balance > 0 && sender.balance > sender.amount
+      receiver.balance += sender.amount
   end
   
   def reverse_transfer
-    
+    #opposite of execute_transaction method; sender and receiver must have valid balances
   end
 
 end
