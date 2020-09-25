@@ -17,7 +17,7 @@ class Transfer
   def execute_transaction
     #sender withdraws money and sends it to receiver; receiver adds money to their balance
     #must be valid(refer to bank_account valid? method)
-    if sender.balance > 0 && sender.balance > sender.amount
+    if @sender.balance > 0 && @sender
       receiver.balance += sender.amount
     end
   end
