@@ -1,7 +1,7 @@
 class Transfer
   
-  attr_accessor :sender, :reciever
-  attr_reader :status
+  attr_accessor :status
+  attr_reader :sender, :reciever
   
   
 end
