@@ -8,7 +8,6 @@ class BankAccount
     @balance = balance
     @status = status
   end
-end
     
     
 end
