@@ -33,6 +33,7 @@ class Transfer
       @sender.balance += @amount
       @receiver.balance -= @amount
       @status = "rejected"
-  end
+   end
+end
 
 end
