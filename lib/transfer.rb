@@ -28,8 +28,10 @@ class Transfer
   end
   
   def reverse_transfer
-    #opposite of execute_transaction method; sender and receiver must have valid balances\
-    if @status = "complete"
+    #opposite of execute_transaction method; sender have valid balance
+    if @status = "complete" && @sender.balance > @amount && valid?
+      @sender.balance += @amount
+      @receiver.balance -= @amount
   end
 
 end
