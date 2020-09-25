@@ -32,7 +32,7 @@ class Transfer
     if @status == "complete" && @sender.balance > @amount
       @sender.balance += @amount
       @receiver.balance -= @amount
-      @status == "reversed"
+      @status = "reversed"
     end
   end
 
