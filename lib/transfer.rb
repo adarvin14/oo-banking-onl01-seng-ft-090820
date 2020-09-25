@@ -18,7 +18,11 @@ class Transfer
     #sender withdraws money and sends it to receiver; receiver adds money to their balance
     #must be valid(refer to bank_account valid? method)
     if @sender.balance > @amount && @status == "pending" && valid?
-      receiver.balance += sender.amount
+      @sender.balance -= @amount
+      @receiver.balance += @amount
+      @status = "complete"
+    else
+      @status = "rejected"
     end
   end
   
