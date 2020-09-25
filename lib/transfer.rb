@@ -19,6 +19,7 @@ class Transfer
     #must be valid(refer to bank_account valid? method)
     if sender.balance > 0 && sender.balance > sender.amount
       receiver.balance += sender.amount
+    end
   end
   
   def reverse_transfer
